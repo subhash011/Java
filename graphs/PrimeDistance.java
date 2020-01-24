@@ -74,6 +74,5 @@ class PrimeDistance {
             new CreateGraph().createGraph(graph, src, dest);
             new DijkstraShortestPath().dijkstraShortestPath(graph, src, dest);
         }
-
     }
 }
