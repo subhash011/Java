@@ -1,6 +1,8 @@
 package graphs;
 
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.TreeSet;
 
 class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
     T value;
@@ -47,9 +49,3 @@ class Graph<T extends Comparable<T>> {
         }
     }
 }
-
-// 1 2 8
-// 1 3 3
-// 2 4 1
-// 3 2 3
-// 3 4 9
