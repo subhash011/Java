@@ -31,7 +31,7 @@ public class DAGShortestPath {
 
     public static void main(String[] args) throws IOException {
         Graph<Integer> gr = new Graph<>(true);
-        BufferedReader br = new BufferedReader(new FileReader(new File("input.txt")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("input1.txt")));
         while (true) {
             String str = br.readLine();
             if (str == null) {
@@ -42,7 +42,6 @@ public class DAGShortestPath {
         }
         br.close();
         Stack<Integer> stack = new TopoSort().topoSortUtil(gr);
-        dagShortestPath(gr, stack, 1);
+        dagShortestPath(gr, stack, 1234);
     }
-
 }
