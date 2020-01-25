@@ -28,6 +28,9 @@ class CreateGraph {
 
     public <T extends Comparable<T>> void createGraph(Graph<T> graph, Integer src, Integer dest) {
         List<Integer> list = new GetPrimes().getPrimes();
+        if(!list.contains(src)||!list.contains(dest)){
+            System.out.println("A number is not prime");
+        }
         for (int i = 0; i < list.size(); i++) {
             for (int j = i + 1; j < list.size(); j++) {
                 if (compare(list.get(i), list.get(j))) {
