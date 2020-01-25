@@ -8,8 +8,9 @@ import java.math.*;
 import java.io.*;
 
 class DijkstraShortestPath {
-    public <T extends Comparable<T>> void dijkstraShortestPath(Graph<T> graph, T source) {
+    public <T extends Comparable<T>> void dijkstraShortestPath(Graph<T> graph, T... args) {
         LinkedHashMap<T, Integer> hmap = new LinkedHashMap<>();
+        T source = args[0];
         LinkedHashMap<T, T> parent = new LinkedHashMap<>();
         int val = 0;
         for (T key : graph.map.keySet()) {
@@ -42,9 +43,19 @@ class DijkstraShortestPath {
                 }
             }
         }
-        for (T i : parent.keySet()) {
-            System.out.println(i + " " + parent.get(i) + " " + distance[hmap.get(i)] + " ");
+        T dest = args.length == 2 ? args[1] : (T) Integer.valueOf(-1);
+        if (dest.compareTo((T) Integer.valueOf(-1)) != 0) {
+            for (T i : parent.keySet()) {
+                if (i.compareTo(dest) == 0) {
+                    System.out.println(distance[hmap.get(i)]);
+                }
+            }
+        } else {
+            for (T i : parent.keySet()) {
+                System.out.println(i + " " + parent.get(i) + " " + distance[hmap.get(i)] + " ");
+            }
         }
+
     }
 }
 
