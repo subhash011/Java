@@ -1,6 +1,5 @@
 package graphs;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -10,7 +9,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.TreeSet;
 
-class BelllmanFordAlgo {
+class BellmanFordAlgo {
 
     public <T extends Comparable<T>> boolean bellmanFordAlgo(Graph<T> graph, T source) {
         int v = Graph.vcount;
@@ -72,6 +71,7 @@ class BellmanFord {
             String[] s = str.split(" ");
             graph.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
-        boolean ret = new BelllmanFordAlgo().bellmanFordAlgo(graph, 1);
+        br.close();
+        boolean ret = new BellmanFordAlgo().bellmanFordAlgo(graph, 1);
     }
 }

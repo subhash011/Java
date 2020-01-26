@@ -1,6 +1,5 @@
 package graphs;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -65,6 +64,7 @@ class Prim {
             String[] s = str.split(" ");
             graph.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
+        br.close();
         new PrimAlgo().primMSTAlgo(graph, 1);
     }
 }

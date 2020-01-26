@@ -74,6 +74,7 @@ class DijkstraAlgo {
             String[] s = str.split(" ");
             gr.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
+        br.close();
         new DijkstraShortestPath().dijkstraShortestPath(gr, 2);
     }
 }

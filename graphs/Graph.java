@@ -1,25 +1,9 @@
 package graphs;
 
-
 import java.util.HashMap;
 import java.util.TreeSet;
 
-class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
-    T value;
-    int weight;
-
-    public Node(T value, int weight) {
-        this.value = value;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Node<T> o) {
-        return this.value.compareTo(o.value);
-    }
-}
-
-class Graph<T extends Comparable<T>> {
+public class Graph<T extends Comparable<T>> {
     public static boolean isDirected;
     public static int vcount = 0;
     HashMap<T, TreeSet<Node<T>>> map;
