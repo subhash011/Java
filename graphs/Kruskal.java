@@ -2,6 +2,7 @@ package graphs;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -23,10 +24,11 @@ class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {
         return this.weight.compareTo(a.weight);
     }
 
-    // @Override
-    // public boolean equals(Edge<T> obj) {
-    // return this.src.equals(obj.dest);
-    // }
+    @Override
+    public boolean equals(Object obj) {
+        Edge<T> obj1 = (Edge<T>) obj;
+        return this.src.compareTo(obj1.src) == 0 && this.dest.compareTo(obj1.dest) == 0;
+    }
 
 }
 
@@ -43,7 +45,9 @@ class KruskalAlgo {
                 list.add(edge);
             }
         }
-        System.out.println("hi");
+        list.stream().forEach(x -> {
+            System.out.println("src : " + x.src + " " + "dest : " + x.dest + " " + "weight : " + x.weight);
+        });
     }
 
     public <T extends Comparable<T>> void kruskalAlgo(Graph<T> graph, List<UnionFind<T>> ls) {
