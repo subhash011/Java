@@ -1,6 +1,5 @@
 package graphs;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -46,6 +45,7 @@ class FloydWarshall {
             int col = Integer.parseInt(str[1]);
             graph[row][col] = Integer.parseInt(str[2]);
         }
+        br.close();
         new FloydWarshallAlgo().floydWarshallAlgo(graph);
         for (int i = 0; i < graph.length; i++) {
             for (int j = 0; j < graph.length; j++) {

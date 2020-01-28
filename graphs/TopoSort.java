@@ -11,7 +11,7 @@ import java.util.TreeSet;
 
 class TopoSort {
 
-    public <T extends Comparable<T>> Stack<T> topoSortUtil(Graph<T> graph) {
+    public <T extends Comparable<T>> Stack<T> topoSort(Graph<T> graph) {
         HashMap<T, Boolean> visited = new HashMap<>();
         Stack<T> stack = new Stack<>();
         for (T gr : graph.map.keySet()) {
@@ -51,7 +51,7 @@ class TopoSort {
             gr.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
         br.close();
-        Stack<Integer> stack = new TopoSort().topoSortUtil(gr);
+        Stack<Integer> stack = new TopoSort().topoSort(gr);
         stack.stream().forEach(x -> {
             System.out.print(x + " ");
         });

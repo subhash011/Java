@@ -47,7 +47,7 @@ public class DAGShortestPath {
             gr.addEdge(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
         br.close();
-        Stack<Integer> stack = new TopoSort().topoSortUtil(gr);
+        Stack<Integer> stack = new TopoSort().topoSort(gr);
         dagShortestPath(gr, stack, 1234);
     }
 }
