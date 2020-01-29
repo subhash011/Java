@@ -12,7 +12,7 @@ public class UnionFind<T extends Comparable<T>> {
 
     public UnionFind<T> makeSet() {
         parent = new UnionFind<>(this.value);
-        this.parent.value = this.value;
+        this.parent = this;
         UnionFind.size++;
         return this;
     }

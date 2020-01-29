@@ -37,12 +37,14 @@ class KruskalAlgo {
     public <T extends Comparable<T>> void kruskalAlgo(Graph<T> graph, PriorityQueue<Edge<T>> queue,
             List<UnionFind<T>> ls) {
         List<Edge<T>> list = new ArrayList<>();
-        for (int i = 0; i < Graph.vcount - 1; i++) {
+        for (int i = 0; i < Graph.vcount - 1;) {
             Edge<T> edge = queue.poll();
-            UnionFind<T> x = ls.get((Integer) edge.src - 1).findSet();
+            UnionFind<T> x = ls.get((Integer) edge.src - 1).findSet();// error in find set
             UnionFind<T> y = ls.get((Integer) edge.dest - 1).findSet();
             if (x.value != y.value) {
                 list.add(edge);
+                ls.get((Integer) edge.src - 1).unionMake(ls.get((Integer) edge.dest - 1));
+                i++;
             }
         }
         list.stream().forEach(x -> {
