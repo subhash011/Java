@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.TreeSet;
+import graphs.structures.Graph;
+import graphs.structures.Node;
 
 class BellmanFordAlgo {
 

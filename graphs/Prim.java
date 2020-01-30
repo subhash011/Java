@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
+import graphs.structures.Graph;
+import graphs.structures.Node;
 
 class PrimAlgo {
     public <T extends Comparable<T>> void primMSTAlgo(Graph<T> graph, T source) {

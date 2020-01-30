@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Stack;
+import graphs.structures.Graph;
+import graphs.structures.Node;
 
 public class DAGShortestPath {
     public static <T extends Comparable<T>> void dagShortestPath(Graph<T> gr, Stack<T> stack, T source) {

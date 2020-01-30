@@ -1,4 +1,4 @@
-package graphs;
+package graphs.structures;
 
 import java.util.HashMap;
 import java.util.TreeSet;
@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class Graph<T extends Comparable<T>> {
     public static boolean isDirected;
     public static int vcount = 0;
-    HashMap<T, TreeSet<Node<T>>> map;
+    public HashMap<T, TreeSet<Node<T>>> map;
 
     public Graph(boolean isDirected) {
         Graph.isDirected = isDirected;

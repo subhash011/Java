@@ -1,8 +1,8 @@
-package graphs;
+package graphs.structures;
 
 public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
-    T value;
-    int weight;
+    public T value;
+    public int weight;
 
     public Node(T value, int weight) {
         this.value = value;

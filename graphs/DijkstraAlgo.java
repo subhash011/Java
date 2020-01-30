@@ -9,6 +9,8 @@ import java.util.LinkedHashMap;
 import java.util.PriorityQueue;
 import java.util.TreeSet;
 import java.util.Arrays;
+import graphs.structures.Graph;
+import graphs.structures.Node;
 
 class DijkstraShortestPath {
     public <T extends Comparable<T>> void dijkstraShortestPath(Graph<T> graph, T... args) {

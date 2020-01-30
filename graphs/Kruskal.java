@@ -6,7 +6,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
-
+import graphs.structures.Graph;
+import graphs.structures.Node;
 import graphs.unionfind.UnionFind;
 
 class Edge<T extends Comparable<T>> implements Comparable<Edge<T>> {

@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.TreeSet;
+import graphs.structures.Graph;
+import graphs.structures.Node;
 
 class TopoSort {
 
