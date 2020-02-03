@@ -1,8 +1,9 @@
+//https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/
+
 package graphs;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -40,11 +41,11 @@ class KruskalAlgo {
         List<Edge<T>> list = new ArrayList<>();
         for (int i = 0; i < Graph.vcount - 1;) {
             Edge<T> edge = queue.poll();
-            UnionFind<T> x = ls.get((Integer) edge.src - 1).findSet();// error in find set
-            UnionFind<T> y = ls.get((Integer) edge.dest - 1).findSet();
+            UnionFind<T> x = ls.get((Integer) edge.src).findSet();// error in find set
+            UnionFind<T> y = ls.get((Integer) edge.dest).findSet();
             if (x.value != y.value) {
                 list.add(edge);
-                ls.get((Integer) edge.src - 1).unionMake(ls.get((Integer) edge.dest - 1));
+                ls.get((Integer) edge.src).unionMake(ls.get((Integer) edge.dest));
                 i++;
             }
         }
@@ -78,7 +79,7 @@ class KruskalAlgo {
 class Kruskal {
     public static void main(String[] args) throws IOException {
         Graph<Integer> graph = new Graph<>(false);
-        BufferedReader br = new BufferedReader(new FileReader(new File("input.txt")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("input1.txt")));
         List<UnionFind<Integer>> ls = new ArrayList<>();
         while (true) {
             String str = br.readLine();

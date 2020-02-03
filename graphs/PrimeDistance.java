@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/shortest-path-reach-one-prime-changing-single-digit-time/
+
 package graphs;
 
 import java.io.BufferedReader;
@@ -7,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import graphs.structures.Graph;
-import graphs.structures.Node;
 
 class GetPrimes {
     public List<Integer> getPrimes() {
