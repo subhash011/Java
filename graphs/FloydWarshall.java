@@ -34,6 +34,8 @@ class FloydWarshall {
         for (int[] is : graph) {
             Arrays.fill(is, Integer.MAX_VALUE);
         }
+        // if this initialisation is not considered then we can find all cycle lengths
+        // in the graph i.e graph[i][i] gives the shortest cycle to that vertex
         for (int i = 0; i < graph.length; i++) {
             graph[i][i] = 0;
         }

@@ -77,5 +77,8 @@ class BellmanFord {
         }
         br.close();
         boolean ret = new BellmanFordAlgo().bellmanFordAlgo(graph, 1);
+        if (!ret) {
+            System.out.println("Negative Weight Cycle");
+        }
     }
 }

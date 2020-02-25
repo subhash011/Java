@@ -41,7 +41,7 @@ class KruskalAlgo {
         List<Edge<T>> list = new ArrayList<>();
         for (int i = 0; i < Graph.vcount - 1;) {
             Edge<T> edge = queue.poll();
-            UnionFind<T> x = ls.get((Integer) edge.src).findSet();// error in find set
+            UnionFind<T> x = ls.get((Integer) edge.src).findSet();
             UnionFind<T> y = ls.get((Integer) edge.dest).findSet();
             if (x.value != y.value) {
                 list.add(edge);
