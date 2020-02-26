@@ -18,7 +18,7 @@ public class KnapsackRec {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(new File("input.txt")));
+        BufferedReader br = new BufferedReader(new FileReader(new File("./input.txt")));
         int n = Integer.parseInt(br.readLine());
         int profit[] = new int[n];
         int weights[] = new int[n];
