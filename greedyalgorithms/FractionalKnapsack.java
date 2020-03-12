@@ -7,7 +7,6 @@ import java.util.PriorityQueue;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 
 class FractionalKnapsack {
     private static double[] findSolution(int tot, Integer[] item, Integer[] weight) {
