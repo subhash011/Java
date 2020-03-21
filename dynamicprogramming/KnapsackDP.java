@@ -8,8 +8,8 @@ import java.io.IOException;
 public class KnapsackDP {
     private static int knapsackDP(int[] profit, int[] weights, int weight, int n, int knap[][]) {
 
-        for (int i = 0; i <= n; i++) {
-            for (int j = 0; j <= weight; j++) {
+        for (int j = 0; j <= weight; j++) {
+            for (int i = 0; i <= n; i++) {
                 if (i == 0 || j == 0) {
                     knap[i][j] = 0;
                 } else if (weights[i - 1] <= j) {
