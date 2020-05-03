@@ -1,26 +1,29 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+class Test {
+    public String name;
+    public Integer age;
+
+    public Test(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+}
 
 public class practice {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        String str[] = br.readLine().split(" ");
-        int arr[] = new int[n];
-        for (int i = 0; i < str.length; i++) {
-            arr[i] = Integer.parseInt(str[i]);
-        }
-        int max = 0;
-        int a[] = new int[n];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = arr[i] + max;
-            if (a[i] > max) {
-                max = a[i];
-            }
-        }
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
+        Integer arr[] = { 1, 2, 3, 4 };
+        Test[] test = new Test[3];
+        test[0] = new Test("subhash", 1);
+        test[1] = new Test("Sarvesh", 2);
+        test[2] = new Test("Suresh", 3);
+        Arrays.stream(arr).forEach(x -> {
+            System.out.println(x);
+        });
     }
 }
