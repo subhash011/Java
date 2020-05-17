@@ -22,8 +22,8 @@ public class practice {
         test[0] = new Test("subhash", 1);
         test[1] = new Test("Sarvesh", 2);
         test[2] = new Test("Suresh", 3);
-        Arrays.stream(arr).forEach(x -> {
-            System.out.println(x);
+        Arrays.stream(test).forEach(x -> {
+            System.out.println(x.name);
         });
     }
 }
