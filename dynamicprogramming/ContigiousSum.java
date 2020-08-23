@@ -29,8 +29,8 @@ public class ContigiousSum {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(new File("input.txt")));
-        String s1[] = br.readLine().split(", ");
-        int arr[] = new int[s1.length];
+        String[] s1 = br.readLine().split(", ");
+        int[] arr = new int[s1.length];
         for (int i = 0; i < s1.length; i++) {
             arr[i] = Integer.parseInt(s1[i]);
         }
